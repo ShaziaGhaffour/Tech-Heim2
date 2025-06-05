@@ -1,0 +1,144 @@
+.container-products {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+  background-color: #fff;
+  width: 100%;
+  max-width: 1200px;
+  height: 406px;
+  position: absolute;
+  top: 10px;
+  left: 150px;
+  z-index: 1000;
+  max-height: none;
+  box-sizing: border-box;
+  margin: auto;
+}
+
+.main-container-2 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 900px;
+}
+
+.left-side-container {
+  width: 20%;
+  display: flex;
+  margin: 0;
+  flex-direction: column;
+  border-right: 1px solid #ddd;
+}
+
+.category-button {
+  display: block;
+  margin: 0;
+  padding: 0px;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  text-align: left;
+}
+
+.active-category {
+  color: white;
+  background-color: #007BFF;
+}
+
+.right-side-container {
+  width: 80%;
+  padding-left: 20px;
+}
+
+.product-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.product-card {
+  flex: 1 1 calc(33.333% - 20px);
+  max-width: calc(33.333% - 20px);
+  box-sizing: border-box;
+}
+@media (max-width: 768px) {
+  .container-products {
+    margin-top: 50px;
+  }
+  .main-container-2 {
+    flex-direction: column;
+  }
+
+  .left-side-container,
+  .right-side-container {
+    width: 100%;
+    border-right: none;
+    padding: 10px 0;
+  }
+
+  .right-side-container {
+    padding-left: 0;
+  }
+
+  .product-card {
+    flex: 1 1 calc(50% - 15px);
+    max-width: calc(50% - 15px);
+  }
+
+  .container-products {
+    left: 20px;
+    right: 20px;
+    top: 80px;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 480px) {
+  .left-side-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .category-button {
+    width: 32%; 
+    box-sizing: border-box;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .product-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .container-products {
+    left: 10px;
+    right: 10px;
+    top: 60px;
+    padding: 15px;
+  }
+}
+.home-wrapper {
+  position: relative;
+}
+
+.home-overlay {
+  opacity: 0.2; 
+  filter: blur(2px); 
+  pointer-events: none; 
+}
+
+.product-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  padding: 20px;
+}

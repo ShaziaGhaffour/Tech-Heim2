@@ -1,0 +1,259 @@
+.sidebar-container {
+  width: 280px;
+  margin-right: 24px;
+  background-color: #f9f9f9;
+  padding: 10px 11px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  background-color: #e0e0e0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+}
+
+.username {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.sidebar-menu {
+  overflow: hidden;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 16px 20px;
+  font-size: 14px;
+  color: #666;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+    background-color: #f9f9f9;
+}
+
+.menu-item:last-child {
+  border-bottom: none;
+}
+
+.menu-item:hover {
+  background-color: #eef6ff;
+  color: #4285f4;
+  border-left: 4px solid #4285f4;
+}
+
+.menu-item.active {
+  background-color: #f0f7ff;
+  color: #4285f4;
+  font-weight: 500;
+  border-left: 4px solid #4285f4;
+}
+
+.menu-item.logout {
+  color: #dc3545;
+}
+
+.menu-icon {
+  margin-right: 12px;
+}
+.profile-wrapper {
+  font-family: Arial, sans-serif;
+  background-color: white;
+  min-height: 100vh;
+  padding: 16px;
+}
+.breadcrumb {
+  display: flex;
+  max-width: 1200px;
+  margin: auto;
+  font-size: 14px;
+  color: #666;
+  flex-wrap: wrap;
+}
+.breadcrumb-separator {
+  margin: 0 8px;
+}
+.breadcrumb-active {
+  color: #4285f4;
+}
+.profile-content {
+  display: flex;
+  max-width: 1200px;
+  margin: 24px auto;
+  padding: 24px;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.profile-form {
+  flex: 1;
+  background-color: white;
+  border-radius: 8px;
+  padding: 32px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.profile-form h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.profile-form p {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 32px;
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.form-field label {
+  display: block;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.form-field {
+  position: relative;
+}
+
+.form-field input {
+  width: 100%;
+  padding: 12px 40px 12px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+}
+
+.form-field svg {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #4285f4;
+  cursor: pointer;
+}
+@media (max-width: 992px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-content {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 576px) {
+  .profile-form {
+    padding: 16px;
+  }
+
+  .breadcrumb {
+    font-size: 12px;
+    flex-direction: column;
+    gap: 4px;
+  }
+}
+.identification-container {
+  flex: 1;
+  background-color: white;
+  border-radius: 8px;
+  padding: 32px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.identification-container h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.identification-container p {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 32px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr; 
+  }
+}
+
+.field-label {
+  display: block;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px 40px 12px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+}
+
+.edit-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #4285f4;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .profile-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sidebar-container,
+  .identification-container {
+    width: 100%;
+    max-width: 400px; 
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr; 
+  }
+}

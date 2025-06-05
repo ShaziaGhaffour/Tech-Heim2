@@ -1,0 +1,187 @@
+.new-produtcts-adds-container {
+    width: 85%;
+    height: 400px;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.iphone15-series-container {
+    width: 670px;
+    height: 360px;
+    background: linear-gradient(to right, #1975B9, #1FB6CF, #B0E9C9);
+    border-radius: 8px;
+    padding: 25px;
+    position: relative;
+    overflow: hidden;
+}
+
+.iphone15-series-container>.circle-1 {
+    /* width: 120px; */
+    position: absolute;
+    top: 15%;
+    left: 35%;
+}
+
+.iphone15-series-container>.circle-2 {
+    width: 120px;
+    position: absolute;
+    top: 7%;
+    left: -10%;
+}
+
+.iphone15-series-container>.circle-3 {
+    width: 120px;
+    position: absolute;
+    bottom: -7%;
+    right: -3%;
+}
+
+.iphone15-series-container>.heading {
+    font-size: 24px;
+    font-weight: 500;
+    margin-left: 20px;
+}
+
+.iphone15-series-container>.heading>span {
+    color: white;
+}
+
+.iphone15-series-container>.iphones-images {
+    width: 26.5vw;
+    height: 21vw;
+    margin-top: 50px;
+}
+
+.iphone15-series-right-content {
+    width: 250px;
+    height: 295px;
+    position: absolute;
+    right: 6%;
+    top: 10%;
+    display: flex;
+    flex-direction: column;
+}
+
+.days-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.day-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    padding: 3px 5px;
+    border-radius: 8px;
+}
+
+.day-card>.number {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.day-card>.day {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.iphone15-series-right-content>.heading {
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 35px;
+}
+
+.iphone15-series-right-content>.para {
+    font-size: 16px;
+    font-weight: 300;
+    color: #254b50;
+    margin: 10px 0 0 10px;
+}
+
+.iphone15-series-right-content>.btn {
+    margin: auto;
+    padding: 15px 20px;
+    background-color: #0c68f4;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 20px;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1px;
+}
+
+.play-station-5 {
+    width: 415px;
+    height: 360px;
+    background-color: #005690;
+    border-radius: 8px;
+    padding: 25px;
+    position: relative;
+    overflow: hidden;
+}
+
+.play-station-5-circle {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
+
+.play-station-5-circle2 {
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+}
+
+.play-station-5>.heading {
+    text-align: center;
+    color: #FCC870;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.play-station-5>.ps {
+    position: absolute;
+    right: 3%;
+    top: 36%;
+}
+
+.play-station-5>.ps-heading {
+    position: absolute;
+    right: 46%;
+    top: 60%;
+    color: #005690;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.play-station-5>.btn {
+    width: 130px;
+    margin: auto;
+    padding: 15px;
+    background-color: #0c68f4;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 20px;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1px;
+    position: absolute;
+    right: 48%;
+    top: 75%;
+}

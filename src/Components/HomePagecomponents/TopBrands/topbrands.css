@@ -1,0 +1,60 @@
+.TopBrdands{
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.topbrands-header {
+  border-bottom: 2px solid #ccc;
+padding-bottom: 20px;
+}
+
+.topbrands-title {
+font-size: 32px;
+  font-weight:500
+}
+
+.topbrands-logos {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand-logo {
+  max-width: 100px;
+  height: 100px;
+    transition: transform 0.3s ease;
+}
+ 
+
+.brand-logo:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+@media (max-width: 992px) {
+  .brand-logo {
+    flex: 1 1 calc(20% - 20px); 
+  }
+}
+@media (max-width: 768px) {
+  .brand-logo {
+    flex: 1 1 calc(25% - 20px); 
+  }
+
+  .topbrands-title {
+    text-align: center;
+  }
+}
+@media (max-width: 576px) {
+  .brand-logo {
+    flex: 1 1 calc(33.33% - 20px); 
+  }
+
+  .topbrands-title {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+}
