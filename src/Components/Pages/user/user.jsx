@@ -21,6 +21,9 @@ const User = () => {
   const handleNavigation = (path) => {
   navigate(`/${path}`);
 };
+const handleProfileClick = () => {
+    navigate('/personaldata');
+  };
 
   return (
     <>
@@ -30,7 +33,7 @@ const User = () => {
       </div>
     )}
       <div className="user-container">
-        <div className="profile-header">
+        <div className="profile-header" onClick={handleProfileClick} style={{ cursor: 'pointer' }}>
           <img src="/profile-circle.svg" alt="Profile Icon" />
           <div className="user-info">
             <h5>Shazia Ghaffour</h5>
