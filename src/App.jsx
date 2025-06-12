@@ -52,6 +52,7 @@ function App() {
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/faq" element={<FAQ />} />
                 <Route path="/personaldata" element={<UserProfilePage />} />
+                 <Route path="/SmartWatch " element={<SmartWatch  />} />
             </Routes>
         </div>
     );

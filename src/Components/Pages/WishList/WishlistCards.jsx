@@ -25,7 +25,7 @@ const WishlistCards = () => {
         }
 
         fetchUserWishlists();
-    }, []);
+    }, );
 
 
     const fetchAddToCart = async (id) => {
