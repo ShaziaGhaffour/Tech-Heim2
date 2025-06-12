@@ -10,6 +10,7 @@ import LogoutModel from '../../Pages/LogoutModel';
 import SignupForm from '../../Pages/SignUP/signup';
 import Contact from '../../Pages/contact/Contact';
 import Footer from '../../HomePagecomponents/Footer/Footer';
+import "./personaldata.css"
 
 const Profile = () => {
 
@@ -58,7 +59,7 @@ const Profile = () => {
             <div className='profile-content-container'>
                 <div className="account-lists">
                     <div className="account-content">
-                        <svg className='profile-svg' width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg className='profile-svg' width="40" height="40" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M30.3002 33.8249C30.2502 33.8249 30.1752 33.8249 30.1252 33.8249C30.0502 33.8249 29.9502 33.8249 29.8752 33.8249C24.2002 33.6499 19.9502 29.225 19.9502 23.775C19.9502 18.225 24.4752 13.7 30.0252 13.7C35.5752 13.7 40.1002 18.225 40.1002 23.775C40.0752 29.25 35.8002 33.6499 30.3752 33.8249C30.3252 33.8249 30.3252 33.8249 30.3002 33.8249ZM30.0002 17.425C26.5002 17.425 23.6752 20.275 23.6752 23.75C23.6752 27.1749 26.3502 29.9499 29.7502 30.0749C29.8252 30.0499 30.0752 30.0499 30.3252 30.0749C33.6752 29.8999 36.3002 27.15 36.3252 23.75C36.3252 20.275 33.5002 17.425 30.0002 17.425Z"
                                 fill="#B4B4B4" />
