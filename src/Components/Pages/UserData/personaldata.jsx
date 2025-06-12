@@ -8,6 +8,7 @@ import Discount from '../../Pages/Discount';
 import Security from '../../Pages/Security';
 import LogoutModel from '../../Pages/LogoutModel';
 import SignupForm from '../../Pages/SignUP/signup';
+import Contact from '../../Pages/contact/Contact';
 import Footer from '../../HomePagecomponents/Footer/Footer';
 
 const Profile = () => {
@@ -40,6 +41,8 @@ const Profile = () => {
                 return <Discount />
             case "security":
                 return <Security />
+                      case "Contact":
+                return <Contact />
             default:
                 return null;
         }
@@ -47,7 +50,7 @@ const Profile = () => {
 
     const navigate = useNavigate();
     const handleContactUsClick = () => {
-        navigate("/contactUs");
+        navigate("/Contact");
     }
 
     return (
