@@ -1,50 +1,43 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './user.css';
-import Home from '../../Pages/home/home';
-
+import "./user.css";
+import Home from '../../Pages/home/home'
 const User = () => {
   const navigate = useNavigate();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
     const token = localStorage.getItem("token");
-    setIsLoggedIn(!!token);
+    setIsLoggedIn(!!token); 
   }, []);
 
   const handleLogout = () => {
     const confirmLogout = window.confirm("Are you sure you want to log out?");
     if (confirmLogout) {
-      localStorage.removeItem("token");
+      localStorage.removeItem("token"); 
       navigate('/SignUp');
     }
   };
-
-const handleNavigation = (path) => {
+  const handleNavigation = (path) => {
   navigate(`/${path}`);
 };
 
-  const handleProfileClick = () => {
-    navigate('/personaldata');
-  };
-
   return (
     <>
-      {isLoggedIn && (
-        <div className="home-overlay">
-          <Home />
-        </div>
-      )}
+    {isLoggedIn && (
+      <div className="home-overlay">
+        <Home />
+      </div>
+    )}
       <div className="user-container">
-        <div className="profile-header" onClick={handleProfileClick} style={{ cursor: 'pointer' }}>
+        <div className="profile-header">
           <img src="/profile-circle.svg" alt="Profile Icon" />
           <div className="user-info">
             <h5>Shazia Ghaffour</h5>
             <h5>shaziaghaffour@gmail.com</h5>
           </div>
         </div>
-
-        <div className="profile-item" onClick={() => handleNavigation('Orders')}>
+         <div className="profile-item" onClick={() => handleNavigation('Orders')}>
           <img src="/profile-circle.svg" alt="Icon" />
           <span>Orders</span>
         </div>
@@ -69,4 +62,3 @@ const handleNavigation = (path) => {
 };
 
 export default User;
-
