@@ -55,7 +55,6 @@ cursor: pointer;
   font-size: 12px;
   margin-left: 0.5rem;
 }
-
 .meta-title {
     font-size: 16px;
   font-weight: 500;
@@ -230,7 +229,6 @@ color: #F45E0C;
   font-weight: 300;
   color: #717171;
   margin-top: 25px;
-  /* margin-left: 5px; */
   display: flex;
   flex-wrap: wrap;
 }

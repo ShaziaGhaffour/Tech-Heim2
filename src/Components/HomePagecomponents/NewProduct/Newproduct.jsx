@@ -52,7 +52,7 @@ const BestSellerProduct = () => {
     const token = localStorage.getItem("token");
     if (!token) {
       alert("Please login to add items to cart.");
-      window.location.href = '/login';
+      window.location.href = '/SignUp';
       return;
     }
 

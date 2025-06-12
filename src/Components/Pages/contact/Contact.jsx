@@ -60,7 +60,6 @@ function Contact() {
 </div>
 
         <div className="section-grid">
-          {/* Left Text */}
           <div>
             <h2 className="section-title">Message us</h2>
             <p className="section-text">
@@ -68,8 +67,6 @@ function Contact() {
               need technical support, or simply want to share your feedback, our dedicated team is ready to help.
             </p>
           </div>
-
-          {/* Right Form */}
           <div>
             <div className="form-section">
               <input

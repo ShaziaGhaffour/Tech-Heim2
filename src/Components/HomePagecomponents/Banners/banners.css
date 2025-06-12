@@ -81,7 +81,7 @@
   }
 
   .content-wrapper {
-    flex-direction: row; /* keep side-by-side layout */
+    flex-direction: row; 
     align-items: center;
     justify-content: center;
     text-align: left;

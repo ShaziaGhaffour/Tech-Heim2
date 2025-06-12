@@ -2,14 +2,6 @@ import React from 'react';
 import './PromoCard.css';
 
 import circle1 from './../../../../public/image 187.svg';
-// import circle2 from './assets/iphone-15-series-circle-2.png';
-// import circle3 from './assets/iphone-15-series-circle-3.png';
-// import iphoneImage from './assets/iphone-images.png';
-
-// import yellowCircle1 from './assets/yellow-circle.png';
-// import yellowCircle2 from './assets/yellow-circle-2.png';
-// import psImage from './assets/ps-img.png';
-
 const PromoCard = () => {
   return (
     <div className="new-products-adds-container">
@@ -25,7 +17,6 @@ const PromoCard = () => {
 </div>
 
         <div className="heading">iPhone <span>15 Series</span></div>
-        {/* <img className="iphones-images" src={iphoneImage} alt="iPhones" /> */}
         <div className="iphone15-series-right-content">
           <div className="days-container">
             {[...Array(4)].map((_, i) => (
@@ -45,10 +36,7 @@ const PromoCard = () => {
       </div>
 
       <div className="play-station-5">
-        {/* <img className="play-station-5-circle" src={yellowCircle1} alt="Yellow circle" />
-        <img className="play-station-5-circle2" src={yellowCircle2} alt="Yellow circle 2" /> */}
         <div className="heading">Play Station 5</div>
-        {/* <img className="ps" src={psImage} alt="PlayStation" /> */}
         <div className="ps-heading">Digital Edition + 2TB</div>
         <div className="btn">Buy Now</div>
       </div>

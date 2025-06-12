@@ -1,0 +1,125 @@
+.personal-data-container-2 {
+    width: 80%;
+    margin: 100px auto 20px;
+}
+
+.personal-data-container-2>.heading {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.personal-data-container-2>.para {
+    font-size: 16px;
+    font-weight: 300;
+    color: #717171;
+    margin-top: 10px;
+}
+
+.wishlist-container {
+    width: 100%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.wishlist-card {
+    width: 235px;
+    height: 280px;
+    padding: 20px 10px;
+    border-radius: 8px;
+    box-shadow: 3px 3px 15px rgb(230, 230, 230);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.wishlist-card>img {
+    height: 160px;
+}
+
+.wishlist-card>.heading {
+    font-size: 16px;
+    font-weight: 300;
+    color: #063A88;
+}
+
+.wishlist-card>.btns {
+    width: 95%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btns>.btn {
+    padding: 10px 35px;
+    border-radius: 8px;
+    background-color: white;
+    color: #3779dc;
+    border: 2px solid #3779dc;
+}
+
+.btns>svg {
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .personal-data-container-2 {
+        width: 90%;
+        margin: 60px auto 20px;
+    }
+
+    .personal-data-container-2>.heading {
+        font-size: 18px;
+    }
+
+    .personal-data-container-2>.para {
+        font-size: 14px;
+    }
+
+    .wishlist-container {
+        width: 95%;
+        gap: 15px;
+    }
+
+    .wishlist-card {
+        /* width: 45%; */
+        height: auto;
+        padding: 15px 10px;
+    }
+
+    .wishlist-card>img {
+        height: 140px;
+    }
+
+    .btns>.btn {
+        padding: 8px 15px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .wishlist-card {
+        width: 100%;
+    }
+
+    .wishlist-card>img {
+        height: 120px;
+    }
+
+    .btns {
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+    }
+
+    .btns>.btn {
+        width: 100%;
+        text-align: center;
+    }
+}

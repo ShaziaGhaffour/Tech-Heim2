@@ -56,11 +56,11 @@ const OurBlogs = () => {
               </div></div>
           </div>
 
-  <div className="side-blog">
+          <div className="side-blog">
             <div className='image-blogss'>
-             <img src={BlogImage2} alt="Blog2" className="img-fluides" />
+              <img src={BlogImage2} alt="Blog2" className="img-fluides" />
               <div className="blog-box">
-               <h3 className="blog-heading">Analyzing the August 17th Bitcoin Price Drop</h3>
+                <h3 className="blog-heading">Analyzing the August 17th Bitcoin Price Drop</h3>
                 <p className="blog-desc">
                   Owning a headphone could mean a different thing for different people.it acts as a fashion statement...
                 </p>
@@ -73,10 +73,6 @@ const OurBlogs = () => {
                 </div>
               </div></div>
           </div>
-
-
-
-
         </div>
       </div>
     </div>

@@ -21,8 +21,6 @@ const SignupForm = () => {
       [e.target.name]: e.target.value
     });
   };
-
-  // Signup API call
   const handleSignup = async (e) => {
     e.preventDefault();
 

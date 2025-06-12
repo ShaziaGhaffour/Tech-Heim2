@@ -93,7 +93,6 @@ const PhoneCaseCatalog = () => {
 </div>
       </div>
     </div></div></div>
-    {/* <Home /> */}
     </>
   );
 };

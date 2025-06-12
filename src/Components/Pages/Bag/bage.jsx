@@ -85,10 +85,9 @@ const Bag = () => {
             ))}
           </div>
         )}
-        <button className="checkout-btn" onClick={() => navigate('/order')}>Proceed to Cart</button>
+        <button className="checkout-btn" onClick={() => navigate('/checkout')}>Proceed to Cart</button>
       </div>
     </div></div></div>
-    {/* <Home /> */}
     </>
   );
 };
