@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import "./search.css"
-import Home from '../../Pages/home/home';
+// import Home from '../../Pages/home/home';
 import searchIcon from '../../../../public/search-normal.svg';
 import framImage from '../../../../public/framimage.svg';
 
@@ -31,68 +31,65 @@ const products = [
   { id: 3, img: framImage, title: 'Orange Case' },
   { id: 4, img: framImage, title: 'Purple Case' },
   { id: 5, img: framImage, title: 'Pink Case' },
-  { id: 6, img: framImage, title: 'Green Case' }  
+  { id: 6, img: framImage, title: 'Green Case' }
 ];
 
 const PhoneCaseCatalog = () => {
   const [selectedModel, setSelectedModel] = useState('13');
   const [searchQuery, setSearchQuery] = useState('Phone Case');
-  
+
 
   return (
     <>
-      <div className="home-wrapper">
-    <div className="home-overlay">
-      <Home />
-    </div>
-    
-    <div className="product-overlay">
-    <div className="phone-catalog">
-    <div className="search-container">
-  <input
-    type="text"
-    className="search-input"
-    value={searchQuery}
-    onChange={(e) => setSearchQuery(e.target.value)}
-    placeholder="Search Phone Case"
-  />
+<div className="user-model-overlay"></div>
+      <div className="user-model">
+        <div className="search-container">
+          <input
+            type="text"
+            className="search-input"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            placeholder="Search Phone Case"
+          />
 
-<img src={searchIcon} alt="Search Icon" className="search-icon" />
+          <img src={searchIcon} alt="Search Icon" className="search-icon" />
 
-   <button
-    className="clear-btn"
-    onClick={() => setSearchQuery('')}
-    aria-label="Clear search"
-  >
-    &times;
-  </button>
-</div>
+          <button
+            className="clear-btn"
+            onClick={() => setSearchQuery('')}
+            aria-label="Clear search"
+          >
+            &times;
+          </button>
+        </div>
 
-      <div className="main-content">
-      <div className="sidebar">
-  <ul className="phone-models">
-    {phoneModels.map((model) => (
-      <li
-        key={model.id}
-        className={`phone-model ${selectedModel === model.id ? 'active' : ''}`}
-        onClick={() => setSelectedModel(model.id)}
-      >
-        {model.name}
-      </li>
-    ))}
-  </ul>
-</div>
+        <div className="main-content">
+          <div className="sidebar-search">
+            <ul className="phone-models">
+              {phoneModels.map((model) => (
+                <li
+                  key={model.id}
+                  className={`phone-model ${selectedModel === model.id ? 'active' : ''}`}
+                  onClick={() => setSelectedModel(model.id)}
+                >
+                  {model.name}
+                </li>
+              ))}
+            </ul>
+          </div>
 
-       <div className="products-grid">
-  {products.map((product) => (
-    <div key={product.id} className="product-card">
-      <img src={product.img} alt={product.title} />
-      <p>{product.title}</p>
-    </div>
-  ))}
-</div>
+          <div className="products-grid">
+            {products.map((product) => (
+              <div key={product.id} className="product-card">
+                <img src={product.img} alt={product.title} />
+                <p>{product.title}</p>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
-    </div></div></div>
+      {/* </div> */}
+      {/* </div > */}
     </>
   );
 };

@@ -3,17 +3,18 @@
   padding: 0;
   box-sizing: border-box;
 }
-.overlay {
-  position: absolute;
+.user-model-overlay {
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  backdrop-filter: blur(4px);
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0,0.6);
   display: flex;
   justify-content: center;
-  align-items: center;
-  z-index: 10;
+  align-items: flex-start;
+  z-index: 100;
+  padding-top: 80px;
 }
 
 .signup-container {
@@ -24,10 +25,11 @@
   align-items: center;
   min-height: 100vh;
   padding: 20px;
-  position: absolute;
-  top: 60px;
+  position: fixed;
+  top: 44px;
+  left: 0;
   width: 100%;
-  z-index: 100;
+  z-index: 1000;
 }
 
 .signup-card {

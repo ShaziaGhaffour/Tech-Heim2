@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaTrashAlt } from 'react-icons/fa';
 import './bage.css';
-import Home from '../../Pages/home/home';
 
 const Bag = () => {
   const [carts, setCarts] = useState([]);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
+
   useEffect(() => {
     fetchCarts();
   }, []);
@@ -34,60 +34,68 @@ const Bag = () => {
       setLoading(false);
     }
   };
+
   const handleDelete = async (cartId) => {
-  try {
-    const token = localStorage.getItem('token');
-    const response = await fetch(`https://ecomerceapis.runasp.net/api/Cart/DeleteCartItem/${cartId}`, {
-      method: 'DELETE',
-      headers: {
-        'Authorization': `Bearer ${token}`
-      }
-    });
+    try {
+      const token = localStorage.getItem('token');
+      const response = await fetch(`https://ecomerceapis.runasp.net/api/Cart/DeleteCartItem/${cartId}`, {
+        method: 'DELETE',
+        headers: {
+          'Authorization': `Bearer ${token}`
+        }
+      });
 
-    if (!response.ok) throw new Error('Failed to delete item');
-    fetchCarts(); 
-  } catch (error) {
-    console.error('Delete error:', error);
-  }
-};
-
+      if (!response.ok) throw new Error('Failed to delete item');
+      fetchCarts(); 
+    } catch (error) {
+      console.error('Delete error:', error);
+    }
+  };
+  const handleModalClick = (e) => {
+    e.stopPropagation();
+  };
 
   return (
     <>
-         <div className="home-wrapper">
-    <div className="home-overlay">
-      <Home />
-    </div>
-    
-    <div className="product-overlay">
-    <div className="cart-model">
-      <div className="product-box">
-        {loading ? (
-          <p>Loading cart...</p>
-        ) : carts.length === 0 ? (
-          <p>Your cart is empty</p>
-        ) : (
-          <div className="cart-product-container">
-            {carts.map((value) => (
-              <div className="cart-product" key={value.id}>
-                <img
-                  src={`https://ecomerceapis.runasp.net/${value.productImages}`}
-                  alt={value.productName}
-                  className="product-image"
-                />
-                <div className="cart-product-content">
-                  <p className="product-name">{value.productName}</p>
-                  <p className="product-color">Color: {value.color}</p>
-                  <p className="product-quantity">Quantity: {value.quantity}</p>
-                </div>
-                <FaTrashAlt className="delete-icon" onClick={() => handleDelete(value.id)} />
+      <div className="user-model-overlay"></div>
+      <div className="cart-modal-container" onClick={handleModalClick}>
+        <div className="cart-model">
+          <div className="product-box">
+            {loading ? (
+              <p>Loading cart...</p>
+            ) : carts.length === 0 ? (
+              <p>Your cart is empty</p>
+            ) : (
+              <div className="cart-product-container">
+                {carts.map((value) => (
+                  <div className="cart-product" key={value.id}>
+                    <img
+                      src={`https://ecomerceapis.runasp.net/${value.productImages}`}
+                      alt={value.productName}
+                      className="product-image"
+                    />
+                    <div className="cart-product-content">
+                      <p className="product-name">{value.productName}</p>
+                      <p className="product-color">Color: {value.color}</p>
+                      <p className="product-quantity">Quantity: {value.quantity}</p>
+                    </div>
+                    <FaTrashAlt 
+                      className="delete-icon" 
+                      onClick={() => handleDelete(value.id)} 
+                    />
+                  </div>
+                ))}
               </div>
-            ))}
+            )}
+            <button 
+              className="checkout-btn" 
+              onClick={() => navigate('/Cards')}
+            >
+              Proceed to Cart
+            </button>
           </div>
-        )}
-        <button className="checkout-btn" onClick={() => navigate('/checkout')}>Proceed to Cart</button>
+        </div>
       </div>
-    </div></div></div>
     </>
   );
 };

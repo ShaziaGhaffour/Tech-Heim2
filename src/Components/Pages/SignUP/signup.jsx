@@ -100,9 +100,11 @@ const SignupForm = () => {
   };
 
   return (
+    <>
+    <div className="user-model-overlay"></div>
     <div className="page-wrapper">
       <Home />
-      <div className="overlay">
+      {/* <div className="overlay"> */}
         <div className="signup-container">
           <div className="signup-card">
             <div className="tab-header">
@@ -258,7 +260,8 @@ const SignupForm = () => {
           </div>
         </div>
       </div>
-    </div>
+    {/* </div> */}
+    </>
   );
 };
 

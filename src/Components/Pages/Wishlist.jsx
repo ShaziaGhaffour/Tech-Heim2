@@ -3,6 +3,7 @@ import { addToCart } from '../../API/Addtocards';
 import { deleteWishlist } from '../../API/deleteWishlistItem';
 import { showToast } from '../Pages/Toast';
 
+
 const Wishlist = () => {
     const [wishlist, setWishlist] = useState([]);
     let token= localStorage.getItem("token")
