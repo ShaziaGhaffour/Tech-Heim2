@@ -4,7 +4,7 @@ import { FaBars } from 'react-icons/fa';
 import User from "../user/user";
 import './nevbar.css'
 import Bag from "../Bag/bage";
-import Search from "../Search/Search";
+import Search from "../../Pages/Search/search";
 import ProductTop from "../Product/product";
 
 const Navbar = () => {
